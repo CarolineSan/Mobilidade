@@ -74,30 +74,8 @@ body {
   opacity: 0.7;
 }
 
-/* MODAL IMAGEM */
-.modal-img {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Add Animation */
+/* MODAL ZOOM */
+/* Adiciona Animação de Zoom */
 .modal-content {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
@@ -115,8 +93,8 @@ body {
   to {transform: scale(1)}
 }
 
-/* The Close Button */
-.close {
+/* Botão Fechar do Preview */
+#preview .close {
   position: absolute !important;
   top: 15px !important;
   right: 35px !important;
@@ -127,19 +105,25 @@ body {
   opacity: 1 !important;
 }
 
-.close:hover,
-.close:focus {
+#preview .close:hover,
+#preview .close:focus {
   color: #bbb !important;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
+/* Posiciona Modal da Data de Expiração no meio da página */
+#modalDataExp {
+  top: 25% !important;
+}
+
+/* Imagem 100% em dispositivos menores */
 @media only screen and (max-width: 700px){
   .modal-content {
     width: 100%;
   }
 }
+
 
 .fa-plus-circle {
   color: #148cd1;
@@ -318,6 +302,26 @@ td .fa-eye:hover {
 }
 
 /* Botões de Ação*/
+.fa-rss-square {
+  font-size: 16pt;
+  color: #10b246;
+  cursor: pointer;
+}
+
+.fa-rss-square:hover {
+  opacity: 0.7;
+}
+
+.fa-clone {
+  font-size: 15pt;
+  color: #40a6e5;
+  cursor: pointer;
+}
+
+.fa-clone:hover {
+  opacity: 0.7;
+}
+
 .fa-pen-square {
   font-size: 16pt;
   color: orange;

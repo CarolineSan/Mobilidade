@@ -13,16 +13,8 @@ function seleciona(tr) {
 }
 
 function selLinha(linha, multiplos){
-  var dados = linha.getElementsByTagName("td");
-  var buttons = document.getElementsByClassName('btn-success');
-
   if(linha.classList.contains("selecionado")) {
     linha.classList.remove("selecionado");
-    buttons[0].disabled=false;
-    buttons[1].disabled=true;
-    buttons[2].disabled=true;
-    buttons[3].disabled=true;
-    buttons[4].disabled=true;
   } else {
   if(!multiplos){
   	var linhas = linha.parentElement.getElementsByTagName("tr");
@@ -32,20 +24,21 @@ function selLinha(linha, multiplos){
         }
   }
   linha.classList.toggle("selecionado");
-  if (dados[3].innerHTML == "Sim") {
-    buttons[0].disabled=true;
-    buttons[1].disabled=true;
-    buttons[2].disabled=false;
-    buttons[3].disabled=false;
-    buttons[4].disabled=false;
   }
-  if (dados[3].innerHTML == "Não") {
-    buttons[0].disabled=true;
-    buttons[1].disabled=false;
-    buttons[2].disabled=true;
-    buttons[3].disabled=false;
-    buttons[4].disabled=false;
-  }
+}
+
+//Estiliza cores de acordo com o status
+window.onload = function() {
+  var tabela = document.getElementById('publicacoes').getElementsByTagName('tr');
+  for(var i = 0; i < tabela.length; i++){
+  	var linha = tabela[i];
+    var dados = linha.getElementsByTagName("td");
+    if (dados[3].innerHTML == "Publicado") {
+      dados[3].style.color = "#10b246";
+    }
+    if (dados[3].innerHTML == "Cancelado") {
+      dados[3].style.color = "red";
+    }
   }
 }
 

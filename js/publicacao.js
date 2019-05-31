@@ -17,13 +17,13 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('input[name=tipo]:radio').click(function() {
     if($(this).val()=="0") {
-        $('#texto,#midia').show();
+        $('#texto,#midias').show();
         $('#quiz,#pesquisa').hide();
     } else if($(this).val()=="1") {
-      $('#texto,#midia,#quiz').hide();
+      $('#texto,#midias,#quiz').hide();
       $('#pesquisa').show();
     } else if($(this).val()=="2") {
-      $('#texto,#midia,#pesquisa').hide();
+      $('#texto,#midias,#pesquisa').hide();
       $('#quiz').show();
     }
   });

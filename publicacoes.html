@@ -252,11 +252,7 @@
         </div>
         <div class="row mb-2 mt-3">
           <div class="col-12">
-            <button type="button" class="btn btn-success"><i class="far fa-file-alt"></i> Criar</button>
-            <button type="button" class="btn btn-success" disabled><i class="fas fa-external-link-alt"></i> Publicar</button>
-            <button type="button" class="btn btn-success" disabled><i class="far fa-clone"></i> Nova Versão</button>
-            <button type="button" class="btn btn-success" disabled><i class="far fa-edit"></i> Editar</button>
-            <button type="button" class="btn btn-success" disabled><i class="far fa-trash-alt"></i> Excluir</button>
+            <button type="button" class="btn btn-success"><i class="fas fa-plus"></i> Nova Publicação</button>
           </div>
         </div>
         <div class="row">
@@ -268,19 +264,20 @@
                 <th>Código</th>
                 <th>Título</th>
                 <th style="min-width:200px;">Descrição</th>
-                <th>Publicado</th>
+                <th>Status</th>
                 <th>Tipo</th>
-                <th style="min-width:70px;">Ações</th>
+                <th style="min-width:100px;">Ações</th>
               </tr>
             </thead>
             <tbody id="publicacoes">
-              <tr class="expandir" onclick="seleciona(this);">
+              <tr onclick="seleciona(this);">
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Sim</td>
+                <td>Publicado</td>
                 <td>Texto</td>
                 <td>
+                  <i class="fas fa-clone"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -289,7 +286,7 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Não</td>
+                <td>Inativo</td>
                 <td>Texto</td>
                 <td>
                   <i class="fas fa-eye"></i>
@@ -299,9 +296,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Não</td>
+                <td>Rascunho</td>
                 <td>Quiz</td>
                 <td>
+                  <i class="fas fa-rss-square" data-toggle="modal" data-target="#modalDataExp"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -310,9 +308,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Não</td>
+                <td>Rascunho</td>
                 <td>Quiz</td>
                 <td>
+                  <i class="fas fa-rss-square"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -321,9 +320,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Sim</td>
+                <td>Publicado</td>
                 <td>Mini-Pesquisa</td>
                 <td>
+                  <i class="fas fa-clone"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -332,9 +332,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Sim</td>
+                <td>Publicado</td>
                 <td>Mini-Pesquisa</td>
                 <td>
+                  <i class="fas fa-clone"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -343,9 +344,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Não</td>
+                <td>Rascunho</td>
                 <td>Quiz</td>
                 <td>
+                  <i class="fas fa-rss-square"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -354,9 +356,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Sim</td>
+                <td>Publicado</td>
                 <td>Texto</td>
                 <td>
+                  <i class="fas fa-clone"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -365,9 +368,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Sim</td>
+                <td>Cancelado</td>
                 <td>Mini-Pesquisa</td>
                 <td>
+                  <i class="fas fa-clone"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -376,9 +380,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Não</td>
+                <td>Publicado</td>
                 <td>Quiz</td>
                 <td>
+                  <i class="fas fa-clone"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -387,9 +392,10 @@
                 <td>ADM_298/201905</td>
                 <td>Título da Publicação</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum ut nisi sagittis iaculis ac sit amet nisl.</td>
-                <td>Sim</td>
+                <td>Publicado</td>
                 <td>Texto</td>
                 <td>
+                  <i class="fas fa-clone"></i>
                   <i class="fas fa-pen-square"></i>
                   <i class="fas fa-window-close"></i>
                 </td>
@@ -417,6 +423,32 @@
   </div>
 
 </div>
+
+<!-- Modal Data de Expiração -->
+  <div class="modal" id="modalDataExp">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Confirmar Data de Expiração:</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+      			<div class="form-group">
+                <input type="date" class="form-control" id="date" name="date" required>
+                <div style="text-align: center;margin-top: 20px;">
+                  <button type="submit" class="btn btn-success">Confirmar</button>
+                </div>
+     	 		  </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
