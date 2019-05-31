@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <!-- JavaScript -->
@@ -435,70 +436,143 @@
                     </li>
                   </ul>
                 </div>
-                <div class="mt-4" id="midia">
+                <div class="mt-4" id="midias">
                   <div class="form-group" style="margin-bottom:0!important;">
                     <label for="midia-input" class="btn btn-info" style="margin-bottom:0!important;">Adicionar Mídia</label>
                     <button type="button" class="btn btn-danger" onclick="deleteAllFile();">Apagar Tudo</button>
                     <input type="file" class="form-control-file" id="midia-input" name="midia" style="display:none;" onchange="exibirMidia(this);">
                   </div>
-                  <div class="card mt-1">
-                    <div id="midias">
-                      <div class="card bg-light item-midia">
-                    	 <div class="clearfix">
-                          <div class="card-body col-8 float-left">
-                            <h6 class="card-title">nome_documento.doc</h6>
-                            <p>12,0 Kb</p>
-                            <p>Tipo: Documento</p>
-                          </div>
-                          <div class="card-body col-4 float-right">
-                            <img class="ico" src="img/doc-ico.png" alt="Ícone da Mídia">
-                          </div>
-                          <img class="ico-close" src="img/close.png" alt="Fechar">
-                    	  </div>
-                       </div>
-
-                       <div class="card bg-light item-midia">
-                     	 <div class="clearfix">
-                           <div class="card-body col-8 float-left" style="">
-                             <h6 class="card-title">nome_video.mp4</h6>
-                             <p>12,0 Kb</p>
-                             <p>Tipo: Vídeo</p>
-                           </div>
-                           <div class="card-body col-4 float-right">
-                             <img class="ico" src="img/video-ico.png" alt="Ícone da Mídia">
-                           </div>
-                           <img class="ico-close" src="img/close.png" alt="Fechar">
-                     	  </div>
-                        </div>
-
-                        <div class="card bg-light item-midia">
-                      	 <div class="clearfix">
-                            <div class="card-body col-8 float-left" style="">
-                              <h6 class="card-title">nome_audio.mp3</h6>
+                  <div class="mt-2" id="doc">
+                    <p class="label-midias">Documentos</p>
+                    <ul class="list-midia">
+                      <li>
+                        <div class="card midia">
+                          <div class="card-body">
+                            <div class="float-left">
+                              <img src="img/doc-ico2.png" alt="ícone de Documento">
+                            </div>
+                            <div class="float-left ml-2">
+                              <p>nome_documento_1.xls</p>
                               <p>12,0 Kb</p>
-                              <p>Tipo: Áudio</p>
                             </div>
-                            <div class="card-body col-4 float-right">
-                              <img class="ico" src="img/audio-ico.png" alt="Ícone da Mídia">
+                            <div class="float-right">
+                              <i class="fas fa-folder-minus"></i>
                             </div>
-                            <img class="ico-close" src="img/close.png" alt="Fechar">
-                      	  </div>
-                         </div>
-
-                         <div class="card bg-light item-midia">
-                       	 <div class="clearfix">
-                             <div class="card-body col-8 float-left" style="">
-                               <h6 class="card-title">nome_imagem.jpg</h6>
-                               <p>12,0 Kb</p>
-                               <p>Tipo: Imagem</p>
-                             </div>
-                             <div class="card-body col-4 float-right">
-                               <img class="ico" src="img/image-ico.png" alt="Ícone da Mídia">
-                             </div>
-                             <img class="ico-close" src="img/close.png" alt="Fechar">
-                       	  </div>
                           </div>
-                    </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mt-2" id="imagem">
+                    <p class="label-midias">Imagens</p>
+                    <ul class="list-midia">
+                      <li>
+                        <div class="card midia">
+                          <div class="card-body">
+                            <div class="float-left">
+                              <img src="img/image-ico2.png" alt="ícone de Documento">
+                            </div>
+                            <div class="float-left ml-2">
+                              <p>nome_imagem_1.png</p>
+                              <p>12,0 Kb</p>
+                            </div>
+                            <div class="float-right">
+                              <i class="fas fa-folder-minus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card midia">
+                          <div class="card-body">
+                            <div class="float-left">
+                              <img src="img/image-ico2.png" alt="ícone de Documento">
+                            </div>
+                            <div class="float-left ml-2">
+                              <p>nome_imagem_2.png</p>
+                              <p>12,0 Kb</p>
+                            </div>
+                            <div class="float-right">
+                              <i class="fas fa-folder-minus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card midia">
+                          <div class="card-body">
+                            <div class="float-left">
+                              <img src="img/image-ico2.png" alt="ícone de Documento">
+                            </div>
+                            <div class="float-left ml-2">
+                              <p>nome_imagem_3.png</p>
+                              <p>12,0 Kb</p>
+                            </div>
+                            <div class="float-right">
+                              <i class="fas fa-folder-minus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mt-2" id="video">
+                    <p class="label-midias">Vídeos</p>
+                    <ul class="list-midia">
+                      <li>
+                        <div class="card midia">
+                          <div class="card-body">
+                            <div class="float-left">
+                              <img src="img/video-ico.png" alt="ícone de Documento">
+                            </div>
+                            <div class="float-left ml-2">
+                              <p>nome_video_1.mp4</p>
+                              <p>12,0 Kb | 03:56</p>
+                            </div>
+                            <div class="float-right">
+                              <i class="fas fa-folder-minus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card midia">
+                          <div class="card-body">
+                            <div class="float-left">
+                              <img src="img/video-ico.png" alt="ícone de Documento">
+                            </div>
+                            <div class="float-left ml-2">
+                              <p>nome_video_2.mp4</p>
+                              <p>12,0 Kb | 02:34</p>
+                            </div>
+                            <div class="float-right">
+                              <i class="fas fa-folder-minus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mt-2" id="audio">
+                    <p class="label-midias">Áudios</p>
+                    <ul class="list-midia">
+                      <li>
+                        <div class="card midia">
+                          <div class="card-body">
+                            <div class="float-left">
+                              <img src="img/audio-ico.png" alt="ícone de Documento">
+                            </div>
+                            <div class="float-left ml-2">
+                              <p>nome_audio.mp3</p>
+                              <p>12,0 Kb | 01:55</p>
+                            </div>
+                            <div class="float-right">
+                              <i class="fas fa-folder-minus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <br>

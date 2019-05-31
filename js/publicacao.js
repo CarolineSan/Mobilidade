@@ -298,3 +298,11 @@ $(document).on("input", "#chave", function () {
 
     $(".crt-chave").text(caracteresDigitados + "/200");
 });
+
+//Drag and Drop Itens da Lista de Mídia
+$(document).ready(function() {
+  $( function() {
+    $( ".list-midia" ).sortable();
+    $( ".list-midia" ).disableSelection();
+  } );
+});

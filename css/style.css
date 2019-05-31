@@ -222,43 +222,49 @@ ul.arvore > li:nth-of-type(odd) {
   margin-right: 5px;
 }
 
-#midias {
-  padding-top: 20px;
+.label-midias {
+  border-bottom: 1px solid #dddddd;
+  font-size:15pt;
+  padding-left:5px;
 }
 
-.item-midia {
-  width: 320px;
-  height: 107px;
-  float: left;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.midia {
+  background-color: #dceaf2 !important;
+  min-width: 255px !important;
+  margin-bottom: 5px;
 }
 
-.item-midia h6 {
+.midia div.card-body {
+  padding-top: 7px !important;
+  padding-left: 10px !important;
+  padding-right: 5px !important;
+  padding-bottom: 7px !important;
+}
+
+.midia div.card-body img {
+  width: 35px;
+}
+
+.midia div.card-body p {
+  font-size: 10pt;
+  margin-top: -2px;
   margin-bottom: 0;
 }
 
-.item-midia p {
-  position: relative;
-  margin-bottom: 0;
+.list-midia {
+  list-style: none;
+  padding-inline-start: 0;
 }
 
-.item-midia img.ico {
-  width: 70px;
-}
-
-.item-midia img.ico-close {
-  width: 20px;
-  height: 20px;
-  display: block;
-  margin-left: 308px;
-  margin-top: -5px;
+.fa-folder-minus {
+  color: red;
+  font-size: 15pt;
   cursor: pointer;
-  position: absolute;
+  margin-top: 8px;
+  margin-right: 8px;
 }
 
-.item-midia img.ico-close:hover {
+.fa-folder-minus:hover {
   opacity: 0.7;
 }
 
