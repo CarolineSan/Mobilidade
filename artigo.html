@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conformidade | Painel de Controle</title>
+  <!-- Estilo -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <!-- CSS Bootstrap -->
+  <link rel="stylesheet" href="bootstrap.css">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- JavaScript -->
+  <script src="bootstrap.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- AngularJs -->
+  <script src="angular.min.js"></script>
+  <!-- include summernote css/js -->
+  <link href="editor/summernote-lite.css" rel="stylesheet">
+  <script src="editor/summernote.min.js"></script>
+  <script src="editor/lang/summernote-pt-BR.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="publicacao.js"></script>
+</head>
+<body color="green">
+  <!-- Sidebar -->
+<div class="sidebar">
+
+  <div class="content">
+    <div id="jquery-accordion-menu" class="jquery-accordion-menu">
+				<div class="jquery-accordion-menu-header mt-3">
+          <img src="logo.png" alt="Logo" style="width:175px;padding-bottom:10px;border-bottom: solid 1px #049372">
+          <i class="fas fa-user-circle" style="font-size:55pt; color:#fff;margin-top:20px"></i>
+          <p>Caroline Oliveira</p>
+          <small style="color:#f7f96d">Administrador</small>
+        </div>
+				<ul>
+					<li class="active"><a href="index.html"><i class="fa fa-home"></i>Página Inicial</a></li>
+					<li><a href="#"><i class="fa fa-file-image-o"></i>Notificações </a><span class="jquery-accordion-menu-label">12 </span></li>
+          <!-- Primeiro Item -->
+					<li>
+            <a href="#">
+              <span class="ink animate-ink" style="height: 260px; width: 260px; top: -104px; left: 103px;"></span>
+              <i class="fas fa-edit"></i>Publicações <span class="submenu-indicator" id="ind-publicacoes" onclick="openTab('sub-publicacoes', 'ind-publicacoes');">+</span>
+            </a>
+						<ul class="submenu" id="sub-publicacoes">
+							<li><a href="#">Visualizar</a></li>
+							<li><a href="#">Nova Publicação<span class="submenu-indicator" id="ind-design" onclick="openTab('sub-design', 'ind-design');">+</span></a>
+								<ul class="submenu" id="sub-design">
+									<li><a href="#">Artigo</a></li>
+									<li><a href="imagem.html">Imagem</a></li>
+									<li><a href="#">Vídeo</a></li>
+									<li><a href="#">Arquivo</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+          <!-- Segundo Item -->
+          <li>
+            <a href="#" class="">
+              <span class="ink animate-ink" style="height: 260px; width: 260px; top: -104px; left: 103px;"></span>
+              <i class="fas fa-search"></i>Mini-Pesquisa <span class="submenu-indicator" id="ind-pesquisa" onclick="openTab('sub-pesquisa', 'ind-pesquisa');">+</span>
+            </a>
+						<ul class="submenu" id="sub-pesquisa">
+							<li><a href="#">Visualizar</a></li>
+							<li><a href="#">Nova Pesquisa</a></li>
+						</ul>
+					</li>
+          <!-- Terceiro Item -->
+          <li>
+            <a href="#" class="">
+              <span class="ink animate-ink" style="height: 260px; width: 260px; top: -104px; left: 103px;"></span>
+              <i class="fas fa-tablet-alt"></i>Quiz <span class="submenu-indicator" id="ind-quiz" onclick="openTab('sub-quiz', 'ind-quiz');">+</span>
+            </a>
+						<ul class="submenu" id="sub-quiz">
+							<li><a href="#">Visualizar</a></li>
+							<li><a href="#">Novo Quiz</a></li>
+						</ul>
+					</li>
+          <!-- Quarto Item -->
+          <li>
+            <a href="#" class="">
+              <span class="ink animate-ink" style="height: 260px; width: 260px; top: -104px; left: 103px;"></span>
+              <i class="fas fa-chart-line"></i>Relatórios <span class="submenu-indicator" id="ind-relatorios" onclick="openTab('sub-relatorios', 'ind-relatorios');">+</span>
+            </a>
+						<ul class="submenu" id="sub-relatorios">
+							<li><a href="#">Visualizar</a></li>
+							<li><a href="#">Novo Relatório</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fa fa-newspaper-o"></i>Mais </a></li>
+					<li><a href="#"><i class="fas fa-info-circle"></i>Ajuda </a></li>
+					<li><a href="#"><i class="fa fa-envelope"></i>Contato </a></li>
+				</ul>
+				<!-- <div class="jquery-accordion-menu-footer">Conformidade</div> -->
+			</div>
+		</div>
+</div>
+
+<div class="main">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+   <a class="navbar-brand" href="#">
+   </a>
+
+  <!-- Toggler/collapsibe Button -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="navbar-nav ml-auto">
+    <i class="fas fa-user-circle" style="font-size:20pt; color:#ccd1cd;margin-top:7px"></i>
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Caroline Oliveira
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Minha Conta</a>
+        <a class="dropdown-item" href="#">Configurações</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Sair</a>
+      </div>
+    </li>
+  </ul>
+  </div>
+</nav>
+
+<!-- CONTEUDO PRINCIAL -->
+  <div class="container">
+
+    <div class="row mt-3">
+      <div class="col">
+        <p><a href="" style="color:green">Publicações</a> > Artigo</p>
+          <div class="card mb-3">
+              <h6 class="card-header">Criar novo artigo</h6>
+              <div class="card-body">
+              <div class="container">
+              <form action="" class="needs-validation" novalidate>
+                <!--  TÍTULO-->
+                <div class="form-group">
+                  <label for="titulo">Título:</label>
+                  <input type="text" class="form-control form-control-sm" id="titulo" placeholder="Título da publicação" name="titulo" required>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <!--  DESCRIÇÃO-->
+                <div class="form-group">
+                  <label for="desc">Descrição:</label>
+                  <textarea class="form-control form-control-sm" rows="5" id="desc" placeholder="Descrição da publicação" name="desc" required></textarea>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <!-- DESCRIÇÃO PÚBLICA? -->
+                <div class="form-group">
+                  <label for="exb-desc">Descrição pública?</label>
+                  <select class="form-control form-control-sm" id="exb-desc" name="exb-desc" required>
+                    <option value="Sim" selected>Sim</option>
+                    <option value="Não">Não</option>
+                  </select>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <!-- PÚBLICO ALVO -->
+                <div class="form-group">
+                  <label for="alvo">Público alvo:</label>
+                  <select class="form-control form-control-sm" id="alvo" name="alvo" onchange="optionCheckAlvo();" required>
+                    <option value="0" selected>Todos</option>
+                    <option value="1">Usuário Interno</option>
+                    <option value="2">Usuário Externo</option>
+                  </select>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <div id="interno">
+                <!-- DIRETORIA -->
+                <div class="form-group">
+                  <label for="diretoria">Diretoria: <small>(Segure <kbd>Ctrl</kbd> ou arraste para selecionar mais de um)</small></label>
+                  <select multiple class="form-control form-control-sm" id="diretoria" name="diretoria" onchange="optionCheckDiretoria();" required>
+                    <option value="DACORP">DACORP</option>
+                    <option value="DPP&T">DPP&T</option>
+                    <option value="DE&P">DE&P</option>
+                    <option value="DEORG">DEORG</option>
+                    <option value="DFINRI">DFINRI</option>
+                    <option value="DGC">DGC</option>
+                    <option value="DRGN">DRGN</option>
+                    <option value="PRESIDENCIA">PRESIDENCIA</option>
+                  </select>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <!-- ÁREA -->
+                <div class="form-group">
+                  <ul class='diretoria-lista list-group' id="area">
+                  </ul>
+                </div>
+                <!-- ADMINISTRADOR -->
+                <div class="form-group">
+                  <label for="adm">Função Gerencial?</label>
+                  <select class="form-control form-control-sm" id="adm" name="adm" required>
+                    <option value="Não" selected>Não</option>
+                    <option value="Sim">Sim</option>
+                  </select>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <!-- CHAVES Usuários -->
+                <div class="form-group">
+                  <label for="chaves">Usuários: <small>(Segure <kbd>Ctrl</kbd> ou arraste para selecionar mais de um)</small></label>
+                  <select multiple class="form-control form-control-sm" id="chaves" name="chaves" disabled required>
+                    <option value="C0M3">C0M3 (Sicrano Fulano Beltrano)</option>
+                    <option value="X4TM">X4TM (Beltrano Fulano Sicrano)</option>
+                    <option value="X4DR">X4DR (Fulano Beltrano Sicrano)</option>
+                    <option value="X458">X458 (Sicrano Fulano Beltrano)</option>
+                    <option value="B2RH">B2RH (Beltrano Fulano Sicrano)</option>
+                    <option value="X1BM">X1BM (Fulano Beltrano Sicrano)</option>
+                    <option value="CS9U">CS9U (Sicrano Fulano Beltrano)</option>
+                  </select>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" checked type="checkbox" id="chavesAll" name="chavesAll" onchange="checkTodos('chaves', 'chavesAll');"> Todos
+                    </label>
+                  </div>
+                </div>
+                </div>
+                <div id="externo">
+                  <!-- VÍNCULO COM A PETROBRAS -->
+                  <div class="form-group">
+                    <label for="vinculo">Vínculo com a Petrobras: <small>(Segure <kbd>Ctrl</kbd> ou arraste para selecionar mais de um)</small></label>
+                    <select multiple class="form-control form-control-sm" id="vinculo" name="vinculo" disabled required>
+                      <option value="vinculo1">Vínculo 1</option>
+                      <option value="vinculo2">Vínculo 2</option>
+                      <option value="vinculo3">Vínculo 3</option>
+                      <option value="vinculo4">Vínculo 4</option>
+                      <option value="vinculo5">Vínculo 5</option>
+                    </select>
+                    <div class="invalid-feedback">Campo Obrigatório.</div>
+                    <div class="form-group form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" checked type="checkbox" id="vinculoAll" name="vinculoAll" onchange="checkTodos('vinculo', 'vinculoAll');"> Todos
+                      </label>
+                    </div>
+                  </div>
+                  <!-- SEGMENTO -->
+                  <div class="form-group">
+                    <label for="segmento">Segmento: <small>(Segure <kbd>Ctrl</kbd> ou arraste para selecionar mais de um)</small></label>
+                    <select multiple class="form-control form-control-sm" id="segmento" name="segmento" disabled required>
+                      <option value="segmento1">Segmento 1</option>
+                      <option value="segmento2">Segmento 2</option>
+                      <option value="segmento3">Segmento 3</option>
+                      <option value="segmento4">Segmento 4</option>
+                      <option value="segmento5">Segmento 5</option>
+                    </select>
+                    <div class="invalid-feedback">Campo Obrigatório.</div>
+                    <div class="form-group form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" checked type="checkbox" id="segmentoAll" name="segmentoAll" onchange="checkTodos('segmento', 'segmentoAll');"> Todos
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- DATA EXPIRAÇÃO -->
+                <div class="form-group">
+                  <label for="data-exp">Data de Expiração:</label>
+                  <input type="date" class="form-control form-control-sm" id="data-exp" name="data-exp" required>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <!-- CONTEÚDO -->
+                <div class="form-group">
+                  <label for="artigo">Conteúdo:</label>
+                  <textarea class="form-control form-control-sm" rows="10" id="artigo" name="artigo" required></textarea>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <!-- PONTUAÇÃO -->
+                <div class="form-inline mb-3">
+                  <label for="pontuacao">Pontuação:</label>
+                  <input type="number" min="0" class="form-control form-control-sm ml-sm-2 col-1" id="pontuacao" name="pontuacao" required>
+                  <div class="invalid-feedback">Campo Obrigatório.</div>
+                </div>
+                <button type="submit" class="btn btn-secondary mt-3" name="salvar"><i class="fas fa-save"></i> Salvar</button>
+                <button type="submit" class="btn btn-success mt-3" name="publicar"><i class="fas fa-share-square"></i> Publicar</button>
+                <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#preview"><i class="fas fa-eye"></i> Preview</button>
+              </form>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Preview -->
+  <div class="modal" id="preview">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Preview</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body mx-auto">
+          <img src="preview-base.png" alt="preview-publicacao" style="width:350px;">
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
