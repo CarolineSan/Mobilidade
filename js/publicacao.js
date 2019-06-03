@@ -58,7 +58,7 @@ function optionCheckDiretoria(){
 
           area.insertAdjacentHTML('beforeend',
           '<li onclick="abreSub(this);"><i class="far fa-plus-square"></i>' + arrayDiretoria[i] + '</li>' +
-          '<ul class="sub-arvore" style="display: none;">' +
+          '<ul class="sub-arvore1" style="display: none;">' +
             '<li>Gerência 1</li>' +
             '<li>Gerência 2</li>' +
             '<li>Gerência 3</li>' +

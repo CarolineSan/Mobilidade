@@ -168,19 +168,11 @@ ul.arvore > li:nth-of-type(odd) {
   background-color: #e4f4de !important;
 }
 
-.sub-arvore {
-  list-style: none;
-  padding-inline-start: 0;
-}
-
 .sub-arvore1, .sub-arvore2, .sub-arvore3, .sub-arvore4, .sub-arvore5 {
   list-style: none;
   padding-inline-start: 0;
 }
 
-.sub-arvore li {
-  padding-left: 40px;
-}
 .sub-arvore1 li {
   padding-left: 40px;
 }
