@@ -38,6 +38,9 @@ function checkTodos(put, box) {
   var checkbox = document.getElementById(box);
   if(checkbox.checked == true) {
     input.disabled = !this.checked;
+    if(put == "diretoria") {
+      document.getElementById("area").innerHTML = "";
+    }
   } else {
     input.disabled = this.checked;
   }
