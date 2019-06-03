@@ -140,34 +140,20 @@
               <form>
                 <div class="row">
                   <div class="col-6">
+                    <!-- Código -->
+                    <div class="form-inline">
+                      <label for="codigo" class="mb-3">Código:</label>
+                      <input type="text" class="form-control form-control-sm ml-3 mb-3" name="codigo">
+                    </div>
                     <!-- Título -->
                     <div class="form-group">
                       <label for="titulo">Título da Publicação:</label>
-                      <input type="text" class="form-control form-control-sm" id="titulo">
+                      <input type="text" class="form-control form-control-sm" id="titulo" name="titulo">
                     </div>
                     <!-- Descrição -->
                     <div class="form-group">
                       <label for="desc">Descrição:</label>
                       <textarea class="form-control form-control-sm" rows="2" id="desc" name="desc" maxlength="500"></textarea>
-                    </div>
-                    <!-- Publicado -->
-                    <div class="form-group">
-                      <label>Publicado?</label><br>
-                      <div class="form-check-inline ml-2">
-                        <label class="form-check-label">
-                          <input type="radio" class="form-check-input" name="publicado" value="0">Sim
-                        </label>
-                      </div>
-                      <div class="form-check-inline">
-                        <label class="form-check-label">
-                          <input type="radio" class="form-check-input" name="publicado" value="1">Não
-                        </label>
-                      </div>
-                      <div class="form-check-inline">
-                        <label class="form-check-label">
-                          <input type="radio" class="form-check-input" name="publicado" value="2" checked>Todos
-                        </label>
-                      </div>
                     </div>
                     <div class="row">
                       <!-- Status -->
@@ -226,10 +212,24 @@
                     </div>
                   </div>
                   <div class="col-6">
-                    <!-- Código -->
-                    <div class="form-inline">
-                      <label for="codigo" class="mb-3">Código:</label>
-                      <input type="text" class="form-control form-control-sm ml-3 mb-3" name="codigo">
+                    <!-- Publicado -->
+                    <div class="form-group">
+                      <label>Publicado?</label><br>
+                      <div class="form-check-inline ml-2">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="publicado" value="0">Sim
+                        </label>
+                      </div>
+                      <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="publicado" value="1">Não
+                        </label>
+                      </div>
+                      <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="publicado" value="2" checked>Todos
+                        </label>
+                      </div>
                     </div>
                     <!-- Público Alvo -->
                     <div class="form-group">

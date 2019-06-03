@@ -60,7 +60,7 @@ window.onload = function() {
 $(document).ready(function(){
   $("#inputBusca").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#publicacoes tr").filter(function() {
+    $("#publicacoes .show").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
