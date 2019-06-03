@@ -169,32 +169,68 @@
                         </label>
                       </div>
                     </div>
-                    <!-- Tipo de Conteúdo -->
-                    <div class="form-group">
-                      <label>Tipo de Conteúdo:</label>
-                      <div class="form-check">
-                        <label class="form-check-label" for="tipoall">
-                          <input type="radio" class="form-check-input" id="tipoall" name="tipo" value="3" checked>Todos
-                        </label>
+                    <div class="row">
+                      <!-- Status -->
+                      <div class="form-group col-6">
+                        <label>Status:</label>
+                        <div class="form-check">
+                          <label class="form-check-label" for="statusAll">
+                            <input type="radio" class="form-check-input" id="statusAll" name="status" value="4" checked>Todos
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="status0">
+                            <input type="radio" class="form-check-input" id="status0" name="status" value="0">Rascunho
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="status1">
+                            <input type="radio" class="form-check-input" id="status1" name="status" value="1">Publicado
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="status2">
+                            <input type="radio" class="form-check-input" id="status2" name="status" value="2">Expirado
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="status3">
+                            <input type="radio" class="form-check-input" id="status3" name="status" value="3">Cancelado
+                          </label>
+                        </div>
                       </div>
-                      <div class="form-check">
-                        <label class="form-check-label" for="tipo0">
-                          <input type="radio" class="form-check-input" id="tipo0" name="tipo" value="0">Texto + Anexos
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label" for="tipo1">
-                          <input type="radio" class="form-check-input" id="tipo1" name="tipo" value="1">Mini-Pesquisa
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label" for="tipo2">
-                          <input type="radio" class="form-check-input" id="tipo2" name="tipo" value="2">Quiz
-                        </label>
+                      <!-- Tipo de Conteúdo -->
+                      <div class="form-group col-6">
+                        <label>Tipo de Conteúdo:</label>
+                        <div class="form-check">
+                          <label class="form-check-label" for="tipoall">
+                            <input type="radio" class="form-check-input" id="tipoall" name="tipo" value="3" checked>Todos
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="tipo0">
+                            <input type="radio" class="form-check-input" id="tipo0" name="tipo" value="0">Texto + Anexos
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="tipo1">
+                            <input type="radio" class="form-check-input" id="tipo1" name="tipo" value="1">Mini-Pesquisa
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="tipo2">
+                            <input type="radio" class="form-check-input" id="tipo2" name="tipo" value="2">Quiz
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-6">
+                    <!-- Código -->
+                    <div class="form-inline">
+                      <label for="codigo" class="mb-3">Código:</label>
+                      <input type="text" class="form-control form-control-sm ml-3 mb-3" name="codigo">
+                    </div>
                     <!-- Público Alvo -->
                     <div class="form-group">
                       <label>Público Alvo:</label><br>
