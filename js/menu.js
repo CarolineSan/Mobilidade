@@ -42,7 +42,3 @@ window.onload = function () {
       }
   }
 }
-
-function checkPai(pai){
-        var option = pai.value;
-}
