@@ -1,3 +1,8 @@
+//Esconde todos os itens inativos
+$(document).ready(function(){
+  $(".hide").hide();
+});
+
 //Seleciona item Tabela Grid de Publicaçõe
 function seleciona(tr) {
   var tbody = document.getElementById('publicacoes').getElementsByTagName('tr');
@@ -14,6 +19,7 @@ function seleciona(tr) {
 
 function selLinha(linha, multiplos){
   if(linha.classList.contains("selecionado")) {
+    $( ".selecionado" ).nextUntil( ".show" ).hide();
     linha.classList.remove("selecionado");
   } else {
   if(!multiplos){
@@ -21,9 +27,11 @@ function selLinha(linha, multiplos){
         for(var i = 0; i < linhas.length; i++){
            var linha_ = linhas[i];
            linha_.classList.remove("selecionado");
+           $( ".hide" ).hide();
         }
   }
   linha.classList.toggle("selecionado");
+  $( ".selecionado" ).nextUntil( ".show" ).show();
   }
 }
 
@@ -38,6 +46,12 @@ window.onload = function() {
     }
     if (dados[3].innerHTML == "Cancelado") {
       dados[3].style.color = "red";
+    }
+    if (dados[3].innerHTML == "Expirado") {
+      dados[3].style.color = "orange";
+    }
+    if (dados[3].innerHTML == "Rascunho") {
+      dados[3].style.color = "grey";
     }
   }
 }

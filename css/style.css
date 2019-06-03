@@ -288,12 +288,11 @@ table td {
   background: #dee2e6 !important;
 }
 
-.inativo {
+.hide {
   background: #edeff2;
-  display: none;
 }
 
-.inativo:hover {
+.hide:hover {
   background: #edeff2 !important;
 }
 
