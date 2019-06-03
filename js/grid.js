@@ -18,10 +18,10 @@ function seleciona(tr) {
 }
 
 function selLinha(linha, multiplos){
-  if(linha.classList.contains("selecionado")) {
-    $( ".selecionado" ).nextUntil( ".show" ).hide();
-    linha.classList.remove("selecionado");
-  } else {
+//  if(linha.classList.contains("selecionado")) {
+//    $( ".selecionado" ).nextUntil( ".show" ).hide();
+//    linha.classList.remove("selecionado");
+//  } else {
   if(!multiplos){
   	var linhas = linha.parentElement.getElementsByTagName("tr");
         for(var i = 0; i < linhas.length; i++){
@@ -32,7 +32,7 @@ function selLinha(linha, multiplos){
   }
   linha.classList.toggle("selecionado");
   $( ".selecionado" ).nextUntil( ".show" ).show();
-  }
+//  }
 }
 
 //Estiliza cores de acordo com o status
